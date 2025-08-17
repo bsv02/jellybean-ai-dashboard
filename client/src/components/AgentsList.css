@@ -1,0 +1,183 @@
+.agents-container {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.agents-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.agents-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+.agents-count {
+  font-size: 14px;
+  color: #6b7280;
+}
+.agents-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.agent-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+.agent-card:hover {
+  background: #f3f4f6;
+}
+.agent-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.status-dot.online {
+  background: #10b981;
+}
+.status-dot.offline {
+  background: #ef4444;
+}
+.agent-details h4 {
+  font-weight: 500;
+  color: #111827;
+  margin: 0 0 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.agent-details p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+.agent-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.status-badge {
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 12px;
+  text-transform: capitalize;
+}
+.status-badge.online {
+  background: #d1fae5;
+  color: #065f46;
+}
+.status-badge.offline {
+  background: #fee2e2;
+  color: #991b1b;
+}
+.toggle-btn {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.toggle-btn:hover {
+  transform: scale(1.05);
+}
+.toggle-btn.stop {
+  background: #dc2626;
+  color: white;
+}
+.toggle-btn.stop:hover {
+  background: #b91c1c;
+}
+.toggle-btn.start {
+  background: #059669;
+  color: white;
+}
+.toggle-btn.start:hover {
+  background: #047857;
+}
+.loading-container, .error-container {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+.loading-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.skeleton-item {
+  height: 64px;
+  background: #e5e7eb;
+  border-radius: 8px;
+  animation: skeleton-pulse 1.5s ease-in-out infinite alternate;
+}
+.error-message {
+  color: #dc2626;
+  background: #fef2f2;
+  padding: 12px;
+  border-radius: 6px;
+}
+.empty-state {
+  text-align: center;
+  padding: 32px;
+  color: #6b7280;
+}
+
+@keyframes skeleton-pulse {
+  0% { background-color: #e5e7eb; }
+  100% { background-color: #d1d5db; }
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 640px) {
+  .agents-container {
+    padding: 16px;
+    margin: 16px;
+  }
+  
+  .agents-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .agent-card {
+    padding: 12px;
+  }
+  
+  .agent-info {
+    gap: 8px;
+  }
+  
+  .agent-controls {
+    gap: 8px;
+  }
+  
+  .toggle-btn {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+}
