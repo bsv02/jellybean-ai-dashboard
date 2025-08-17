@@ -13,7 +13,7 @@ const AgentsList = () => {
   const fetchAgents = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:5000/agents');
+      const response = await fetch('https://jellybean-ai-dashboard.onrender.com/agents');
       if (!response.ok) throw new Error('Failed to fetch agents');
       const data = await response.json();
       setAgents(data);
@@ -26,7 +26,7 @@ const AgentsList = () => {
 
   const toggleAgentStatus = async (agentId) => {
     try {
-      const response = await fetch(`http://localhost:5000/agents/${agentId}`, {
+      const response = await fetch(`https://jellybean-ai-dashboard.onrender.com/agents/${agentId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
