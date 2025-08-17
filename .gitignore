@@ -1,0 +1,17 @@
+# Node modules
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Env files
+.env
+server/.env
+client/.env
+
+# Build files
+client/build/
+server/build/
+
+# OS / IDE files
+.DS_Store
+Thumbs.db
